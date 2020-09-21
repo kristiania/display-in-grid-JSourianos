@@ -1,9 +1,89 @@
 /* For mobile phones: */
-  
+
+
+.grid-container {
+    font-size: 2rem;
+    color: white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: auto;
+    text-align: left;
+    grid-gap: 1rem;
+}
+
+.grid-item{
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.header {
+    background-color: grey;
+}
+
+.sidebar{
+    background-color: black;
+}
+
+.sidebar2 {
+    background-color: black;
+}
+
+.content{
+    background-color: grey;
+}
+
+
+.footer {
+    background: grey;
+}
+
 @media only screen and (min-width: 600px) {
 /* For tablets: */
+
+    .header {
+        grid-column: 1 / span 2;
+    }
+    .content{
+        grid-column: 2 / span 1;
+        grid-row: 2;
+    }
+
+    .footer{
+        grid-row: 4;
+        grid-column: 1 / span 2;
+    }
+
+    .sidebar2 {
+        grid-row: 3;
+        grid-column: 1 / span 2;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
 /* For desktop: */
+    .header {
+        grid-row: 1;
+        grid-column: 1 / span 3;
+    }
+
+    .sidebar {
+        grid-row: 2;
+        grid-column: 1 / span 1;
+    }
+
+    .content {
+        grid-row: 2;
+        grid-column: 2 / span 1;
+    }
+
+    .sidebar2 {
+        grid-row: 2;
+        grid-column: 3 / span 1;
+    }
+
+    .footer{
+        grid-row: 3;
+        grid-column: 1 / span 3;
+    }
 }
